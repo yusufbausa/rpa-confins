@@ -1,0 +1,2539 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_New_Customer_Personal" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="602,22321" sap2010:WorkflowViewState.IdRef="Create_New_Customer_Personal_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Create_New_Customer_Personal" sap:VirtualizedContainerService.HintSize="602,22256" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="560,22164" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="https://confins-qa.taf.co.id/confins/">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,22062" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="popCalculate" />
+              <Variable x:TypeArguments="x:Boolean" Name="loginExist" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:UiElementExists DisplayName="Element Exists" Exists="[loginExist]" sap:VirtualizedContainerService.HintSize="484,68" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5d6203a-8cd3-471f-a882-cbb4a8b5153d" Selector="&lt;html app='msedge.exe' title='NEW CONFINS LOGIN PAGE' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" TimeoutMS="2000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[loginExist]" sap:VirtualizedContainerService.HintSize="484,871" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,692" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtUsername'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="ABW0572">
+                    <ui:SetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="776c0571-c337-4368-a752-ee6b3e0ce3a2" InformativeScreenshot="e727c3e40a56fff8d87bae4a0a330e8b" Selector="&lt;html app='msedge.exe' title='NEW CONFINS LOGIN PAGE' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SetValue.Target>
+                  </ui:SetValue>
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtPassword'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="password">
+                    <ui:SetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dbce97af-aa41-4718-bcc2-e91dc8b571a5" InformativeScreenshot="494096600ac72dbe5bb9f43ec7a006aa" Selector="&lt;html app='msedge.exe' title='NEW CONFINS LOGIN PAGE' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SetValue.Target>
+                  </ui:SetValue>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lbLogin'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7771251d-7d79-48f4-9280-47a53e178782" InformativeScreenshot="94ee1adcc537bc1d51a7c3602feb6d87" Selector="&lt;html app='msedge.exe' title='NEW CONFINS LOGIN PAGE' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  uModDRole_ctl00_gvRo...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca76da4e-8445-4d15-873f-40f0bce0a0b3" InformativeScreenshot="b907c4202acc0ea30c6047105329a189" Selector="&lt;html app='msedge.exe' title='NEW CONFINS LOGIN PAGE' /&gt;&lt;webctrl id='uModDRole_ctl00_gvRoles_lbSelectRole_2' tag='A' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG  imgMenu'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a39b955d-c328-4d82-86c6-95db5b6fdbfd" InformativeScreenshot="f2c5ed4d27f913c326d816cb631eb3ab" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='imgMenu' tag='IMG' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  rModuleList_lbModule...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a99ae0d7-f3ae-484d-9f6b-84a95efdeb0b" InformativeScreenshot="7411402649b06a7c71438e4178366226" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='treeContainer' tag='IFRAME' /&gt;&lt;webctrl id='rModuleList_lbModuleList_1' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  LOS/Customer/Custome...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bfe1424f-68ad-4485-9ad8-8e751780c2e9" InformativeScreenshot="0b5b0f93589a7e8a1105873d3cf6e57c" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='treeContainer' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Toolbar_AddPerson...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="961ea2f7-4a0f-4cc1-87ad-dff27eefce05" InformativeScreenshot="4a8e723c394d98bf7c08c3bf82147921" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtCustName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_3" Text="Kiichiro Uchiyama Fiveteen">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="155e461a-0382-4217-91f9-0f86b55929c2" InformativeScreenshot="db25b1c0f9c5b4d05c89100d2c7d45ea" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucId_ucRefCustI...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="KTP">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>AKTA</x:String>
+                  <x:String>KTP</x:String>
+                  <x:String>KIMS</x:String>
+                  <x:String>KITAP</x:String>
+                  <x:String>KITAS</x:String>
+                  <x:String>KK</x:String>
+                  <x:String>NIK</x:String>
+                  <x:String>OTHERS</x:String>
+                  <x:String>PASSPORT</x:String>
+                  <x:String>SIM</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="adc8a7c6-1a33-4e06-999e-90d5f2ce826c" InformativeScreenshot="9927088917e7fd959efdf36d33b1c480" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucId_txtCustIdNo'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="3171000100011195">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e04e68ac-5f24-4dc5-97aa-fc48b9d21b53" InformativeScreenshot="d3c634c8cd657240a9cd199f54bcb9e1" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='ucId_txtCustIdNo' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucIdExpiredDt_tx...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="10/10/2030">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dd2032be-42b6-42ec-8a12-2fd0c183e333" InformativeScreenshot="408d86d9834790ad812511f8003bc49a" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='ucIdExpiredDt_txtDatePicker' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b75a78b1-6a6f-4947-9d2c-dc8521eadbbf" InformativeScreenshot="bab2fadc98ce21ac832b0119372cfc3f" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='2' parentid='dInfo' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  rblCustGender_1'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="341cd50b-5c08-4745-bf14-3a5604fd4921" InformativeScreenshot="a18497a24ae22f652938f0d704367caf" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='rblCustGender_1' tag='INPUT' type='radio' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtBirthPlace'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_6" Text="Jakarta">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="74b0c8af-9068-47fc-a1d2-b7c596b55643" InformativeScreenshot="c2b5f753d26883130a8c0de78c11a69b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='txtBirthPlace' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBirthDate_txtD...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_7" Text="10/10/1990">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ab397098-a3aa-4613-aa95-f69e4435f156" InformativeScreenshot="3d0ef49ef80c54adf7919c79d2025cbb" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='ucBirthDate_txtDatePicker' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtNpwp'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_8" Text="1234567950">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cc844c1-e2ad-45b0-abb9-43b02435ca62" InformativeScreenshot="9afdba71329eff2335aaf3521ba83b65" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='txtNpwp' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtMotherMaidenN...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_9" Text="Mother">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9e56e7c-3d8c-4811-bb3f-c0c13f062137" InformativeScreenshot="085c12db6a6f6688750c4b20008f1c64" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='txtMotherMaidenName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Toolbar_Next'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6818eb4a-536c-437a-b476-5ed6a374eb4a" InformativeScreenshot="21e2ec2aa077d6b68bc1842f564644fe" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrSalutation_...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="MR.">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Select One</x:String>
+                  <x:String>MR.</x:String>
+                  <x:String>MRS.</x:String>
+                  <x:String>MS.</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c0004c4f-c10c-4ff1-b767-06d6fe4a46ed" InformativeScreenshot="d0621c7a7e97f3294d6f49218056bf4d" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtPrefixName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_10" Text="Kiichiro">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a9ff6148-8d56-4b83-a65e-f3f827795ebb" InformativeScreenshot="66049a88cafcfd7efeac2874a36634f1" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtSuffixName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_11" Text="Uchiyama">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="04ef6d22-85d8-4b1b-8318-251a5b3e45ab" InformativeScreenshot="2ebb4eadb63361957e933493fd7f58de" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtSuffixName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtNickName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_12" Text="Kiichiro">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd8228d1-3620-49be-8cf8-d1bab0cd2654" InformativeScreenshot="327982942f0089b08dc3dd005dc3b833" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtNickName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrNationality...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="WNI">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Select One</x:String>
+                  <x:String>WNA</x:String>
+                  <x:String>WNI</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57e10397-25df-4f16-ae66-d3557ae7304c" InformativeScreenshot="499efc1c5e83771182c52815d91e4e95" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrNationality_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrEducation_d...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="S1">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>Belum Tamat SD/Sederajat</x:String>
+                  <x:String>D1</x:String>
+                  <x:String>D2</x:String>
+                  <x:String>D3</x:String>
+                  <x:String>S1</x:String>
+                  <x:String>S2</x:String>
+                  <x:String>S3</x:String>
+                  <x:String>SD</x:String>
+                  <x:String>SMA</x:String>
+                  <x:String>SMP</x:String>
+                  <x:String>Tidak/Belum Sekolah</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d54fd828-e66d-421d-9caa-39c73fe65098" InformativeScreenshot="a9961e89725810e6504fa7dfe4d29510" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrEducation_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrReligion_dd...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="Kristen">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String>Select One</x:String>
+                  <x:String>Budha</x:String>
+                  <x:String>HINDU</x:String>
+                  <x:String>Islam</x:String>
+                  <x:String>KATOLIK</x:String>
+                  <x:String>KONFUCHU</x:String>
+                  <x:String>Kristen</x:String>
+                  <x:String>OTHERS</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e6bfe08-8529-49c3-b80f-2bf2b6d6b755" InformativeScreenshot="cb596460473a4df4c853bfb72b7e5cec" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrReligion_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrMaritalStat...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_6" Item="Single">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Select One</x:String>
+                  <x:String>Divorce</x:String>
+                  <x:String>Married</x:String>
+                  <x:String>Single</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7e3de781-5848-44d3-8b2b-9d34daf11e7d" InformativeScreenshot="23522bf8a2c2de844e159bd58d00c796" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrMaritalStat_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtMblPhn1'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_13" Text="081234567890">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea49898a-38c4-4cd6-a18b-db56dc9c39f5" InformativeScreenshot="cdcf7344b4ba23a07ba9495054d6b812" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtMblPhn1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lb_Form_SaveCont...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="61f648d8-3875-4a4a-979d-b8b72707a835" InformativeScreenshot="23fd70aa5615c5ba9268bc579eca17ee" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Add_Addr'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="08fe0c6d-f91a-4f24-8b23-143eb9ba0af0" InformativeScreenshot="65e911cc96d9d9b06150454260380b57" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Add_Addr' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucAddrType_ddlR...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_7" Item="Legal Address">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>Legal Address</x:String>
+                  <x:String>Company Address</x:String>
+                  <x:String>Residence Address</x:String>
+                  <x:String>Job Address</x:String>
+                  <x:String>Other Business Address</x:String>
+                  <x:String>Previous Job Address</x:String>
+                  <x:String>Emergency Address</x:String>
+                  <x:String>Other Residence Address</x:String>
+                  <x:String>Company Second Address</x:String>
+                  <x:String>Establishment Address</x:String>
+                  <x:String>Address Verified by Collector</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09782830-c1dd-4b32-91d3-9c089e5a4135" InformativeScreenshot="a0bc2ee8e1d7a195618fb7820fbe1082" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'TEXTAREA  ucAddr_txtOff...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_14" Text="Jalan Gatot Subroto No. 123 Jakarta Selatan">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a21f6a8e-1fbc-4795-8ea3-b1f008a99506" InformativeScreenshot="ef4012d2f19373f16a6d80cc58cffd37" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtRT'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_15" Text="001">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="975340c2-ee9a-4dad-82e7-7af974259b88" InformativeScreenshot="4fbd62aec42c4df4245e707cfa3e7042" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtRW'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_16" Text="002">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e83756f8-ca67-46c3-bc15-a7964a2d7c5d" InformativeScreenshot="d558664b0634cccd0fe572dc378dae64" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtRW' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ucAddr_ucLookupZ...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1e82abd8-3564-4f1a-be77-ada96a7387b8" InformativeScreenshot="6a5547b164df4296fb5a00f2e53ef44b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='image' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT '" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_17" Text="%pancoran%">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eef5823f-4ead-47e2-b538-5591a979091a" InformativeScreenshot="7f133ad2ad9ddbd17cacfb3530719d14" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_ucLookupZipCode_uclZipCode_umd_ctl00_ucS_rptFixedSearch_t*' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucAddr_ucLookupZipCo...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aebdb47c-748d-490f-9988-9894c246c8d8" InformativeScreenshot="0c54166ef5985366835291703a112b15" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_ucLookupZipCode_uclZipCode_umd_ctl00_ucS_lbSearch' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucAddr_ucLookupZipCo...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db39986e-90c8-4e85-84cb-3e7b9e098fe3" InformativeScreenshot="1784afdb4c4b9a8160a1cabc6d383a0e" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_ucLookupZipCode_uclZipCode_umd_ctl00_gvL_hpSelect_0' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtPhnAre...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_18" Text="021">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1baecec-418c-4311-958f-bec14b0cb7e0" InformativeScreenshot="30cb2dcf00eddb53aebce43da50051db" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtPhnArea1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtPhn1'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_19" Text="081234567">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a9e6045d-7b5f-479b-abf0-89c3804ea1b4" InformativeScreenshot="1e0fb712f878932a8acaecb5bf5cc8f2" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtPhn1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtPhoneE...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_20" Text="890">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1787d07-b756-438c-835e-0616b8d2aee4" InformativeScreenshot="0011c01ad5f93567f7ef787118bd2645" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtPhoneExt1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtCoyName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_21" Text="PT. Bersahaja Selalu">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a81952a7-393d-480f-9106-896d209b0efe" InformativeScreenshot="04101f7336c8ce429970d2244c064630" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtCoyName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Save_AddCust'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a19c7e46-3106-4375-983f-48fc2b0972af" InformativeScreenshot="4e964e60632b1e06295c4a0c91523926" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Add_Addr'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="484c831e-a33c-4f34-ba1f-8d4c2d575ad5" InformativeScreenshot="b77e961da775438b0ae4a12c69575a69" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Add_Addr' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_CopyAddr'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="452dc1d2-c563-42dd-9a7e-eab5f086a5dd" InformativeScreenshot="50511a50a06b0158ad73bdacfbad1208" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_CopyAddr' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucAddrType_ddlR...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_8" Item="Residence Address">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>Legal Address</x:String>
+                  <x:String>Company Address</x:String>
+                  <x:String>Residence Address</x:String>
+                  <x:String>Job Address</x:String>
+                  <x:String>Other Business Address</x:String>
+                  <x:String>Previous Job Address</x:String>
+                  <x:String>Emergency Address</x:String>
+                  <x:String>Other Residence Address</x:String>
+                  <x:String>Company Second Address</x:String>
+                  <x:String>Establishment Address</x:String>
+                  <x:String>Address Verified by Collector</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9d50e74e-3e0e-482f-aa15-aba648211bf0" InformativeScreenshot="a3a771d67cf26f965e13dcee2c238471" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'TEXTAREA  ucAddr_txtOff...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_22" Text="Jalan Gatot Subroto No. 123 Jakarta Selatan">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e1ec8a77-24c2-405b-82e9-fe44ae46d131" InformativeScreenshot="1dea2ff36d5117d57ca942f4d28549df" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtRT'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_23" Text="001">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="579e8556-17e3-453e-b6b4-3aaa20f2642f" InformativeScreenshot="36764b8ff7c5d4b3dd87cb489615d945" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtRW'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_24" Text="002">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="62cd82c3-755c-475c-9c07-93664be8cc4f" InformativeScreenshot="5f42ce8062ed544fd3d60e0afdfaf5c7" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtRW' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ucAddr_ucLookupZ...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="346ef95b-a4a2-4527-a8f7-7f3fd5399d04" InformativeScreenshot="6a5547b164df4296fb5a00f2e53ef44b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='image' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT '" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_25" Text="%pancoran%">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40aab14f-e563-40cb-8332-b546626ec98c" InformativeScreenshot="7f133ad2ad9ddbd17cacfb3530719d14" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_ucLookupZipCode_uclZipCode_umd_ctl00_ucS_rptFixedSearch_t*' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucAddr_ucLookupZipCo...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dff55d3a-c328-42fb-b30f-8ac28be80f9c" InformativeScreenshot="0c54166ef5985366835291703a112b15" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_ucLookupZipCode_uclZipCode_umd_ctl00_ucS_lbSearch' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucAddr_ucLookupZipCo...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84c4c7d5-5c71-4e23-aef9-d64e359f2f61" InformativeScreenshot="1784afdb4c4b9a8160a1cabc6d383a0e" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_ucLookupZipCode_uclZipCode_umd_ctl00_gvL_hpSelect_0' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtPhnAre...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_26" Text="021">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="211e7517-ecbd-41ac-a050-8817000bbfb5" InformativeScreenshot="30cb2dcf00eddb53aebce43da50051db" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtPhnArea1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtPhn1'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_27" Text="081234567">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5da6ed1-7db3-44d6-89f0-d1b276c76f51" InformativeScreenshot="67043b9bde341e7f953bbe57f36c8da2" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtPhn1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucAddr_txtPhoneE...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_28" Text="890">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="850b9d73-688e-4d41-97bf-6a85a02eff3a" InformativeScreenshot="f0e6a678d73fbf5be7fdce970d9b1782" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddr_txtPhoneExt1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtCoyName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_29" Text="PT. Bersahaja Selalu">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dcfd1c7d-bd14-4f83-b1c9-56c31e36cc45" InformativeScreenshot="04101f7336c8ce429970d2244c064630" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtCoyName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Save_AddCust'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59d49a0e-ca39-491f-8a0d-09eea9d150da" InformativeScreenshot="20fa70655432a30b8b9134d2c726b9fa" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Add_Addr'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99fcc9a1-2460-43ca-ae68-21e5a1754a8a" InformativeScreenshot="b77e961da775438b0ae4a12c69575a69" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Add_Addr' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucRefCopyAddr_d...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_9" Item="Legal Address">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Select One</x:String>
+                  <x:String>Legal Address</x:String>
+                  <x:String>Residence Address</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21884622-d525-4edd-93bd-e08d8dfdaf2f" InformativeScreenshot="8b9c3fa16cd48e5cea191f1afe15daa4" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_CopyAddr'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65656e3b-1bef-45b9-a828-5ce4aa3556d7" InformativeScreenshot="29ca2aecf218bb5c3153fda39f6ab468" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_CopyAddr' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucAddrType_ddlR...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_10" Item="Job Address">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>Legal Address</x:String>
+                  <x:String>Company Address</x:String>
+                  <x:String>Residence Address</x:String>
+                  <x:String>Job Address</x:String>
+                  <x:String>Other Business Address</x:String>
+                  <x:String>Previous Job Address</x:String>
+                  <x:String>Emergency Address</x:String>
+                  <x:String>Other Residence Address</x:String>
+                  <x:String>Company Second Address</x:String>
+                  <x:String>Establishment Address</x:String>
+                  <x:String>Address Verified by Collector</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5a61956-a5ca-4560-be71-bb44e2fd73a0" InformativeScreenshot="d42f007b33204d607275657021884119" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucAddrType_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtCoyName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_30" Text="PT. Bersahaja Selalu">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57310515-9ab0-4d12-b6c8-307ee9a56468" InformativeScreenshot="04101f7336c8ce429970d2244c064630" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtCoyName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Save_AddCust'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7dfca454-c86f-429e-8ef8-96c172079a8f" InformativeScreenshot="d033139f6b542febb3d5ddb7063d999f" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lb_Form_SaveCont...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c850100-7226-4abd-9db0-f790f538aa62" InformativeScreenshot="693eda7f1207348e1fc7072277b4b820" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lb_Form_SaveCont...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b3e9681-28d1-4b19-80c8-c2aa861f8257" InformativeScreenshot="de7b0d589167ec70c3cb16a44355cc17" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ucProfession_ucl...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b64ca4e2-1ab9-473e-8856-1ed9b12bcd3d" InformativeScreenshot="7665a1f276475475e08b678e40b810e0" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='image' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT '" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SetValue_31" Text="ADVOCAT">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1491da2-c7af-47d2-973f-02ee6b201aa9" InformativeScreenshot="aa6147fe87112a33d75204ce04317f4c" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucProfession_uclProf_umd_ctl00_ucS_rptFixedSearch_txtSearchValue*' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucProfession_uclProf...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="776739b2-1266-4853-ba87-e49cb9863185" InformativeScreenshot="65472a83250fe71d656bb440fe430eeb" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucProfession_uclProf_umd_ctl00_ucS_lbSearch' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucProfession_uclProf...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6746e4d9-9cbb-43ea-9916-b09096fdbea1" InformativeScreenshot="29f0f85f2cfa993dab64dd434a0a15fa" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucProfession_uclProf_umd_ctl00_gvL_hpSelect_0' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtProfNo'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_32" Text="1234567890">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1b8b61ed-e973-4df7-a003-29e5a55b9901" InformativeScreenshot="b8a425e48a05c2cbe5a6466094a9185c" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtProfNo' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrJobPosition...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_11" Item="DIREKTUR">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="64">
+                  <x:String>Select One</x:String>
+                  <x:String>ANGGOTA ORGANISASI</x:String>
+                  <x:String>ANGGOTA PEMBINA</x:String>
+                  <x:String>ANGGOTA PENGAWAS</x:String>
+                  <x:String>ANGGOTA PENGURUS</x:String>
+                  <x:String>BENDAHARA ORGANISASI</x:String>
+                  <x:String>BENDAHARA PENGURUS</x:String>
+                  <x:String>BINTARA</x:String>
+                  <x:String>BINTARA TINGGI</x:String>
+                  <x:String>DIREKTUR</x:String>
+                  <x:String>DIREKTUR UTAMA</x:String>
+                  <x:String>EXECUTIVE</x:String>
+                  <x:String>GENERAL MANAGER / DIV. HEAD</x:String>
+                  <x:String>GOLONGAN 1</x:String>
+                  <x:String>GOLONGAN 2</x:String>
+                  <x:String>GOLONGAN 3</x:String>
+                  <x:String>GOLONGAN 4</x:String>
+                  <x:String>KETUA ORGANISASI</x:String>
+                  <x:String>KETUA PEMBINA</x:String>
+                  <x:String>KETUA PENGAWAS</x:String>
+                  <x:String>KETUA PENGURUS</x:String>
+                  <x:String>KOMISARIS</x:String>
+                  <x:String>KOMISARIS UTAMA</x:String>
+                  <x:String>KUASA DIREKSI</x:String>
+                  <x:String>MANAGER / DEPT. HEAD</x:String>
+                  <x:String>MANAGERIAL</x:String>
+                  <x:String>OWNER (PEMILIK USAHA)</x:String>
+                  <x:String>PEMBINA</x:String>
+                  <x:String>PENGAWAS</x:String>
+                  <x:String>PENGURUS</x:String>
+                  <x:String>PERWIRA MENENGAH</x:String>
+                  <x:String>PERWIRA PERTAMA</x:String>
+                  <x:String>PERWIRA TINGGI</x:String>
+                  <x:String>PRESIDEN DIREKTUR</x:String>
+                  <x:String>SEKERTARIS PENGURUS</x:String>
+                  <x:String>SEKRETARIS ORGANISASI</x:String>
+                  <x:String>STAFF</x:String>
+                  <x:String>SUPERVISOR / SECTION HEAD</x:String>
+                  <x:String>TAMTAMA</x:String>
+                  <x:String>WAKIL KETUA ORGANISASI</x:String>
+                  <x:String>WAKIL PRESIDEN DIREKTUR</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a08aea4d-d706-4e4e-a5a8-ebd8c635cd81" InformativeScreenshot="4d565503114da693576b7ad5a4d4e27e" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrJobPosition_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrJobStat_ddl...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_12" Item="PERMANENT">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String>Select One</x:String>
+                  <x:String>CONTRACT</x:String>
+                  <x:String>OTHERS</x:String>
+                  <x:String>OWNER</x:String>
+                  <x:String>PERMANENT</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="801af45a-6934-4459-8e64-617b2e17a345" InformativeScreenshot="0990189c3c8ffc98b3c54971128886b7" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrJobStat_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ucIndustry_uclIn...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b7eb07ef-3a06-47f9-a3fd-6e69e8545b04" InformativeScreenshot="c6a623cdf7e8a3fef878ca3e05977c04" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucIndustry_uclIndustry_imb' tag='INPUT' type='image' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT '" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_33" Text="ASURANSI">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8e57de4c-2cd0-41a0-962d-5ceb507e7bb1" InformativeScreenshot="422a5913bdd9e9a645f246695a5cebe4" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucIndustry_uclIndustry_umd_ctl00_ucS_rptFixedSearch_txtSearchVal*' name='ucIndustry$uclIndustry$umd$ctl00$ucS$rptFixedSearch$ctl04$txtSea*' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucIndustry_uclIndust...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ca05fae-c50c-46d9-b409-c599c2fc6d6e" InformativeScreenshot="dcd438f89bd62908b86c6fc70940592b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucIndustry_uclIndustry_umd_ctl00_ucS_lbSearch' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  ucIndustry_uclIndust...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_32" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="238b0490-3b0a-49cb-8db1-93a6019d18c0" InformativeScreenshot="03351be6f80a2a12a38df524d45fb8cc" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucIndustry_uclIndustry_umd_ctl00_gvL_hpSelect_0' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrCoyScale_dd...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_13" Item="MEDIUM">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String></x:String>
+                  <x:String>LARGE</x:String>
+                  <x:String>MEDIUM</x:String>
+                  <x:String>SMALL</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="527ab686-d12f-4d89-8820-0d7b6d86af6b" InformativeScreenshot="368a2f9a2850638da5e1fd390c790e1f" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucMrCoyScale_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  rblInvestmentTyp...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b5974fe-60f9-4ae1-b69b-95838156a3be" InformativeScreenshot="034e2966d0d5f84edf4d73e1111a99ba" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='rblInvestmentType_1' tag='INPUT' type='radio' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtNoOfEmp'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_34" Text="100">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d14a606a-bc34-440f-b5e5-3dc7ff10a078" InformativeScreenshot="c7007f975b79c3c2885ac79ffb2f03ef" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txtNoOfEmp' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucEstablishment...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_14" Item="January">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>January</x:String>
+                  <x:String>February</x:String>
+                  <x:String>March</x:String>
+                  <x:String>April</x:String>
+                  <x:String>May</x:String>
+                  <x:String>June</x:String>
+                  <x:String>July</x:String>
+                  <x:String>August</x:String>
+                  <x:String>September</x:String>
+                  <x:String>October</x:String>
+                  <x:String>November</x:String>
+                  <x:String>December</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e80d5ea4-593e-4400-a95a-e7de23f24caf" InformativeScreenshot="28591b3e1fd0454c9c4842a64543330b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEstablishmentDt_ddlMonth' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucEstablishmentD...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_35" Text="2019">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="599c2a26-9638-4590-92b9-f5567858667f" InformativeScreenshot="c347f4a09197a1ce5cad91af19e3506f" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEstablishmentDt_txtYear' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lb_Form_SaveCont...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6b7efe3-658f-45d2-9bcb-c0a8717183eb" InformativeScreenshot="27a8e6cd02cf6f0e81869dc1add6d067" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_8" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Add_Emergency'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_35" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cda92bf7-747c-41b7-9375-e3db447205ed" InformativeScreenshot="cc5dcded5dc97e4a47b8639589b38d63" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Add_Emergency' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  txtEmergencyName'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_36" Text="Michael">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7564290d-4084-47d6-bbbf-541bf6235f19" InformativeScreenshot="8bef256ef74166c014ddb0eef6a2f63e" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucMrCustRelatio...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_15" Item="FATHER">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="16">
+                  <x:String>Select One</x:String>
+                  <x:String>BROTHER</x:String>
+                  <x:String>CHILD</x:String>
+                  <x:String>EMERGENCY</x:String>
+                  <x:String>FAMILY</x:String>
+                  <x:String>FATHER</x:String>
+                  <x:String>GUARANTOR</x:String>
+                  <x:String>KARYAWAN</x:String>
+                  <x:String>MANAJEMEN</x:String>
+                  <x:String>MOTHER</x:String>
+                  <x:String>REFERENCE</x:String>
+                  <x:String>SELF</x:String>
+                  <x:String>SHARE HOLDER</x:String>
+                  <x:String>SISTER</x:String>
+                  <x:String>SPOUSE</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5153f1c5-4ab0-4102-af8a-6ba0383392de" InformativeScreenshot="45fab56dc86799b81d4dbfed6da3861a" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucEmergencyConta...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_37" Text="08123456789">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a616a9e-3cb8-48a9-bbda-e0ea37a81f2f" InformativeScreenshot="788340d17bba97333610a8d0feacbcb5" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEmergencyContactInfo_txt_CustEmergencyCntct_MobilePhn1' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'TEXTAREA  ucEmergencyAd...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_38" Text="Jalan Gatot Subroto No. 123 Jakarta Selatan">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e98a9a73-a560-4199-9f42-ddc3630198f0" InformativeScreenshot="f950cba9e441d25f47c5d38c1c0b3fa1" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucEmergencyAddr_...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_39" Text="001">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51ed30dc-2786-449f-a464-c8e168b7734e" InformativeScreenshot="5359eb07557988ffedebc18ed2ebee59" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEmergencyAddr_txtRT' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucEmergencyAddr_...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_40" Text="002">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b278638-4b44-485c-8761-c36fd9d880cd" InformativeScreenshot="c56bfafdb9683059c544dd9b244479be" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEmergencyAddr_txtRW' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6731c563-85d5-4b0e-84c7-63a8deb6b2c8" InformativeScreenshot="4d8c6adb4451a19202bb5eb7db26d11f" Selector="&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl parentid='ucEmergencyAddr_divAddress' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'TD'" sap:VirtualizedContainerService.HintSize="484,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="down" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="14909ab7-9a5c-49a3-ab1d-65387341cb82" InformativeScreenshot="744267101c9e4eb8ed8a5d9778494487" Selector="&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl parentid='ucEmergencyAddr_divAddress' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  ucEmergencyAddr_...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_36" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ebea6ae7-8c5a-4321-85a4-a72b89a6a89a" InformativeScreenshot="37b9a206e946f58206f4d1d229e32cfc" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='image' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT '" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_41" Text="%pancoran%">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07250790-7602-45c4-a228-1fa2264c6ec4" InformativeScreenshot="7f133ad2ad9ddbd17cacfb3530719d14" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEmergencyAddr_ucLookupZipCode_uclZipCode_umd_ctl00_ucS_rptFixe*' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d75770de-7ae7-48bd-a7e4-4e4bf5926bc7" InformativeScreenshot="89f2b1b58d91f6a8ce9a0b04e9035a59" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEmergencyAddr_ucLookupZipCode_uclZipCode_umd_ctl00_ucS_lbSearc*' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5ef77da3-5f00-457d-9edc-7bbd52d36968" InformativeScreenshot="4c67bbaabc8ebc6e39f0ee9f6d70e6d9" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucEmergencyAddr_ucLookupZipCode_uclZipCode_umd_ctl00_gvL_hpSelec*' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_52" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="91d3bce1-7301-46ea-ae5f-b92aa8444584" InformativeScreenshot="b39b9d15ce46e61259e02276dee82023" Selector="&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl parentid='ucEmergencyAddr_divAddress' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='3' tag='TD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'TD'" sap:VirtualizedContainerService.HintSize="484,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="up" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c39cf4b-776c-49c2-9670-c27c973ba948" InformativeScreenshot="6f4f7c2f75d802532d65330cd76cde0e" Selector="&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl parentid='ucEmergencyAddr_divAddress' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='3' tag='TD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Save_Emergen...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="130bd5c1-948d-415c-b099-467becc4fddb" InformativeScreenshot="53579d70db3fa88e207d97d86b4defeb" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  txt_CustFinData_...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="15000000">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="14481946-ed95-45e3-84af-0c1c4cf9d1bb" InformativeScreenshot="30f84c69787041bbc6057668adfed31e" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  txt_CustFinData_...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="6000000">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3bb9c8fa-aa2f-4e9a-abe3-02efb5236a37" InformativeScreenshot="c541ef59b8b439b1094a4eb10e4b942c" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txt_CustFinData_GrossProfitAmt_txtInput' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  txt_CustFinData_...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="3000000">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a270d9f-dd95-40bb-876c-dd09e67e6ab4" InformativeScreenshot="f05fd3cba61a044aa568ace183b773ab" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='txt_CustFinData_LivingCostAmt_txtInput' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  btnCalculate'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8d55b2f-1ca9-4d55-916f-648856572d95" InformativeScreenshot="51804bff745d2a9f330c1a29caab5795" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='btnCalculate' tag='INPUT' type='submit' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:UiElementExists DisplayName="Element Exists" Exists="[popCalculate]" sap:VirtualizedContainerService.HintSize="484,68" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5fa6066-eaff-48e1-9a7e-6f5fe93657d2" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Save your information' /&gt;&lt;ctrl name='Save your information' role='alert' /&gt;&lt;ctrl name='No thanks' role='push button' /&gt;" TimeoutMS="2000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[popCalculate]" sap:VirtualizedContainerService.HintSize="484,377" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  No thanks'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ec704d14-c26d-4f4a-9561-44afeaeaaaa6" InformativeScreenshot="c359d9c0f70ddae32101c2aa8fa26c9c" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Save your information' /&gt;&lt;ctrl name='Save your information' role='alert' /&gt;&lt;ctrl name='No thanks' role='push button' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Add_BankAcc'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d7cd2755-6b4e-49aa-9e90-e82aa508c683" InformativeScreenshot="ceaaf0235ae9783f4b1091e5abad3da8" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Add_BankAcc' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucBankStatement...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_16" Item="BANK CENTRAL ASIA">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Select One</x:String>
+                  <x:String>ALFINDO SEJAHTERA BANK</x:String>
+                  <x:String>ALGEMENE BANK NEDERLAND AMRO B</x:String>
+                  <x:String>AMERICAN EXPRESS BANK</x:String>
+                  <x:String>ANGLOMAS INTERNASIONAL BANK</x:String>
+                  <x:String>ANZ PANIN BANK</x:String>
+                  <x:String>BANGKOK BANK</x:String>
+                  <x:String>Bank Agris</x:String>
+                  <x:String>BANK AGRO NIAGA</x:String>
+                  <x:String>BANK AKEN</x:String>
+                  <x:String>BANK AKITA</x:String>
+                  <x:String>BANK ALFA</x:String>
+                  <x:String>BANK ANDROMEDA</x:String>
+                  <x:String>BANK ANRICO</x:String>
+                  <x:String>BANK ANTARDAERAH</x:String>
+                  <x:String>BANK ARTA NIAGA KENCANA</x:String>
+                  <x:String>BANK ARTHA GRAHA INTERNASIONAL</x:String>
+                  <x:String>BANK ARTOS INDONESIA</x:String>
+                  <x:String>BANK ARYA PANDUARTA</x:String>
+                  <x:String>BANK ASIA PACIFIC (ASPAC BANK)</x:String>
+                  <x:String>BANK ASIATIC</x:String>
+                  <x:String>BANK ASTRIA RAYA</x:String>
+                  <x:String>BANK BAHARI</x:String>
+                  <x:String>BANK BAJA INTERNASIONAL</x:String>
+                  <x:String>BANK BEPEDE INDONESIA</x:String>
+                  <x:String>BANK BISNIS INTERNASIONAL</x:String>
+                  <x:String>BANK BNP PARIBAS</x:String>
+                  <x:String>BANK BPD BANTEN</x:String>
+                  <x:String>BANK BUDI INTERNASIONAL</x:String>
+                  <x:String>BANK BUKOPIN</x:String>
+                  <x:String>BANK BUMI ARTA</x:String>
+                  <x:String>BANK BUMI RAYA UTAMA</x:String>
+                  <x:String>BANK BUMIPUTERA INDONESIA</x:String>
+                  <x:String>BANK CAPITAL INDONESIA</x:String>
+                  <x:String>BANK CENTRAL ASIA</x:String>
+                  <x:String>BANK CENTRAL DAGANG</x:String>
+                  <x:String>BANK CENTRIS INTERNASIONAL</x:String>
+                  <x:String>BANK CHINATRUST INDONESIA</x:String>
+                  <x:String>BANK CIMB NIAGA</x:String>
+                  <x:String>BANK CIMB NIAGA SYARIAH</x:String>
+                  <x:String>BANK CIPUTRA</x:String>
+                  <x:String>BANK CITRA MAKMUR ASIA</x:String>
+                  <x:String>BANK CITRAHASTA DHANAMANUNGGAL</x:String>
+                  <x:String>BANK COMMONWEALTH</x:String>
+                  <x:String>BANK CREDIT AGRICOLE INDOSUEZ</x:String>
+                  <x:String>BANK DAGANG BALI</x:String>
+                  <x:String>BANK DAGANG DAN INDUSTRI</x:String>
+                  <x:String>BANK DAGANG NASIONAL INDONESIA</x:String>
+                  <x:String>BANK DANA ASIA</x:String>
+                  <x:String>BANK DANA HUTAMA</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="81774e61-e6d7-472a-bd2e-0305100a9337" InformativeScreenshot="5f88f12989bd165aa8bd48ccfb61d11a" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_42" Text="Kuningan">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a7d404a5-88d0-4ec3-9c1c-145b0e0e69b4" InformativeScreenshot="2d958984c7e35473e98d7e4c0d57e3ab" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtBankBranch' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_43" Text="2540">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6edd2b3a-b5b3-4111-8fe0-945772f6064b" InformativeScreenshot="341c1867d7b37b74f960cbddde771236" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtBiCode' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_44" Text="Kiichiro Uyama Seven">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="169ec0d6-d24a-4a7d-a60d-5e86b319e1db" InformativeScreenshot="11f8e748769490e6be58135b5e9f5c0b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtAccName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_45" Text="1234567890">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4b99168c-0f95-4bc1-9a74-999fce9aab2d" InformativeScreenshot="e4965e6f0b42b6cabe92d9cbe3255919" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtAccNo' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Save_BankAcc'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9d15129f-451c-48fa-9dc8-093a31a2e283" InformativeScreenshot="2a0c00402943d0d5f6db6144d1b017ed" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Save_BankAcc' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Add_BankAcc'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70d9106e-c2c5-49b1-8f68-50e6dff36f35" InformativeScreenshot="d3dd58abbb9d4d702514f89179d53bea" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Add_BankAcc' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucBankStatement...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_17" Item="BANK CENTRAL ASIA">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>Select One</x:String>
+                  <x:String>ALFINDO SEJAHTERA BANK</x:String>
+                  <x:String>ALGEMENE BANK NEDERLAND AMRO B</x:String>
+                  <x:String>AMERICAN EXPRESS BANK</x:String>
+                  <x:String>ANGLOMAS INTERNASIONAL BANK</x:String>
+                  <x:String>ANZ PANIN BANK</x:String>
+                  <x:String>BANGKOK BANK</x:String>
+                  <x:String>Bank Agris</x:String>
+                  <x:String>BANK AGRO NIAGA</x:String>
+                  <x:String>BANK AKEN</x:String>
+                  <x:String>BANK AKITA</x:String>
+                  <x:String>BANK ALFA</x:String>
+                  <x:String>BANK ANDROMEDA</x:String>
+                  <x:String>BANK ANRICO</x:String>
+                  <x:String>BANK ANTARDAERAH</x:String>
+                  <x:String>BANK ARTA NIAGA KENCANA</x:String>
+                  <x:String>BANK ARTHA GRAHA INTERNASIONAL</x:String>
+                  <x:String>BANK ARTOS INDONESIA</x:String>
+                  <x:String>BANK ARYA PANDUARTA</x:String>
+                  <x:String>BANK ASIA PACIFIC (ASPAC BANK)</x:String>
+                  <x:String>BANK ASIATIC</x:String>
+                  <x:String>BANK ASTRIA RAYA</x:String>
+                  <x:String>BANK BAHARI</x:String>
+                  <x:String>BANK BAJA INTERNASIONAL</x:String>
+                  <x:String>BANK BEPEDE INDONESIA</x:String>
+                  <x:String>BANK BISNIS INTERNASIONAL</x:String>
+                  <x:String>BANK BNP PARIBAS</x:String>
+                  <x:String>BANK BPD BANTEN</x:String>
+                  <x:String>BANK BUDI INTERNASIONAL</x:String>
+                  <x:String>BANK BUKOPIN</x:String>
+                  <x:String>BANK BUMI ARTA</x:String>
+                  <x:String>BANK BUMI RAYA UTAMA</x:String>
+                  <x:String>BANK BUMIPUTERA INDONESIA</x:String>
+                  <x:String>BANK CAPITAL INDONESIA</x:String>
+                  <x:String>BANK CENTRAL ASIA</x:String>
+                  <x:String>BANK CENTRAL DAGANG</x:String>
+                  <x:String>BANK CENTRIS INTERNASIONAL</x:String>
+                  <x:String>BANK CHINATRUST INDONESIA</x:String>
+                  <x:String>BANK CIMB NIAGA</x:String>
+                  <x:String>BANK CIMB NIAGA SYARIAH</x:String>
+                  <x:String>BANK CIPUTRA</x:String>
+                  <x:String>BANK CITRA MAKMUR ASIA</x:String>
+                  <x:String>BANK CITRAHASTA DHANAMANUNGGAL</x:String>
+                  <x:String>BANK COMMONWEALTH</x:String>
+                  <x:String>BANK CREDIT AGRICOLE INDOSUEZ</x:String>
+                  <x:String>BANK DAGANG BALI</x:String>
+                  <x:String>BANK DAGANG DAN INDUSTRI</x:String>
+                  <x:String>BANK DAGANG NASIONAL INDONESIA</x:String>
+                  <x:String>BANK DANA ASIA</x:String>
+                  <x:String>BANK DANA HUTAMA</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fadfd5b5-d272-4c0c-9fce-271bdd2bcd11" InformativeScreenshot="5f88f12989bd165aa8bd48ccfb61d11a" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_46" Text="Kuningan">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1003037-d879-413a-ad37-3f111999f93b" InformativeScreenshot="6bbf7f6c5c5c794a58183776df369dd2" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtBankBranch' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SetValue_47" Text="2540">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1768c7dc-3479-4e3b-9606-8d79d7544b1d" InformativeScreenshot="ec58caa7af173aa40661f019162bd289" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtBiCode' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SetValue_48" Text="Kiichiro Uchiyama Seven">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cea09c25-b64c-4f8c-9208-cb83fd69df76" InformativeScreenshot="87fd984bbc048da52fd89fa79cf1983a" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtAccName' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  ucBankStatementC...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SetValue_49" Text="0987654321">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d62cc6f3-275b-4a00-ac25-0a5dede4fb04" InformativeScreenshot="904b7e3dd1639b1e5cf41450239da14b" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucBankStatementCustBankAcc_txtAccNo' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  ucCustBankAccPu...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_18" Item="Siap Dana">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>Other</x:String>
+                  <x:String>Siap Dana</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="44052614-a4f1-45c7-a043-363bec32ec38" InformativeScreenshot="f95ccd1e7dbf42a336db861a77f344b2" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='ucCustBankAccPurpose_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  lb_Form_Save_BankAcc'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b46f8c9d-3128-4bc3-8580-53c20b1379b2" InformativeScreenshot="22dd6727fea3f0935a38968f39abeda7" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='lb_Form_Save_BankAcc' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lb_Form_SaveCont...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="770a804c-be7f-4e43-8424-7732cf0137e5" InformativeScreenshot="015f1dbde0b82643156868c1d75e16a0" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="359,22" sap2010:WorkflowViewState.IdRef="Delay_10" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  UCDebtGrp_ucBebt...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2d4c94fe-10dc-4a80-932b-9cef612017a2" InformativeScreenshot="f6548f694d989cebb29805af035d1bae" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='image' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT '" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SetValue_50" Text="2540">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b52e644-af3d-419a-8a4f-a3b18a1c88dc" InformativeScreenshot="1250092c11e50fd916d98c5e42c81798" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='UCDebtGrp_ucBebtGroup_umd_ctl00_ucS_rptFixedSearch_txtSearchValu*' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  UCDebtGrp_ucBebtGrou...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_48" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3da95967-c3f5-4c1f-b072-40f608c5bd51" InformativeScreenshot="73d8c891cce22d2475a487bc19793299" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='UCDebtGrp_ucBebtGroup_umd_ctl00_ucS_lbSearch' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  UCDebtGrp_ucBebtGrou...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_49" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e0435c4e-0086-49f0-8371-dbabe4bc8982" InformativeScreenshot="341c8d5c5f77b7fe8af09668b9897aa6" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='UCDebtGrp_ucBebtGroup_umd_ctl00_gvL_hpSelect_0' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  UCDebtBizScl_dd...'" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_19" Item="Usaha Menengah">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String>Select One</x:String>
+                  <x:String>Usaha Mikro</x:String>
+                  <x:String>Usaha Kecil</x:String>
+                  <x:String>Usaha Menengah</x:String>
+                  <x:String>Usaha Besar</x:String>
+                  <x:String>Konsumtif / Skala Usaha Lainnya</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4fcf162e-c983-4088-9bfa-392cda95a7c1" InformativeScreenshot="ecbe9a46c8a013ca1646cb556570618e" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl id='UCDebtBizScl_ddlReference' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  lb_Form_Save_Oth...'" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ba12eab-c6fd-4b82-a46f-67a21a8ead48" InformativeScreenshot="a73c7bf2542ac55480863b49aad2227f" Selector="&lt;html app='msedge.exe' title='New Confins 1 - Main' /&gt;&lt;webctrl id='mainPage' tag='IFRAME' /&gt;&lt;webctrl id='custForm' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="359,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>
